@@ -13,10 +13,10 @@ public class BOJ_9095 {
 		int T = Integer.parseInt(br.readLine());
 		
 		int [] arr = new int[12];
-		arr[1] = 1;
-		arr[2] = 2;
-		arr[3] = 4;
-		for(int i=4;i<=11;i++)
+		arr[1] = 1; //1이 되는 경우의 수 - 1 총 한 가지
+		arr[2] = 2; //2가 되는 경우의 수  - 1+1,2 총 두 가지
+		arr[3] = 4; //3이 되는 경우의 수 - 1+1+1, 1+2, 2+1, 3 총 네 가지
+		for(int i=4;i<=11;i++) //조건이 11까지밖에 없으니까 미리 다 구해놓고 시작
 			arr[i] = arr[i-1]+arr[i-2]+arr[i-3];
 		
 		int n;
